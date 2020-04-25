@@ -12,11 +12,23 @@
     </head>
     <body>
     
-       <?php include('includes/header.php');?>
+       <?php include('includes/header.php');
+             include('includes/functions.php');
+       ?>
         
         <section>
             <div class="container">
                 <div class="entry-list">
+               <?php foreach(getJournalEntries() as $entry){
+                   
+                   echo '<article><h2>'. 
+                    '<a href="detail.php">' . $entry[title] . '</a></h2>'. 
+                    '<time datetime="' . $entry[date] . '">' . date('M jS, Y', strtotime($entry[date])) .'</time>'. 
+                    '</article>';
+               }
+              
+               ?>
+                <!--
                     <article>
                         <h2><a href="detail.php">The best day I’ve ever had</a></h2>
                         <time datetime="2016-01-31">January 31, 2016</time>
@@ -33,6 +45,7 @@
                         <h2><a href="detail_4.php">Dude, where’s my car?</a></h2>
                         <time datetime="2016-01-31">January 31, 2016</time>
                     </article>
+                    -->
                 </div>
             </div>
         </section>

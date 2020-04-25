@@ -11,14 +11,9 @@
         <link rel="stylesheet" href="css/site.css">
     </head>
     <body>
-        <header>
-            <div class="container">
-                <div class="site-header">
-                    <a class="logo" href="index.php"><i class="material-icons">library_books</i></a>
-                    <a class="button icon-right" href="new.php"><span>New Entry</span> <i class="material-icons">add</i></a>
-                </div>
-            </div>
-        </header>
+
+    <?php include('includes/header.php'); ?>
+
         <section>
             <div class="container">
                 <div class="edit-entry">
@@ -40,10 +35,8 @@
                 </div>
             </div>
         </section>
-        <footer>
-            <div>
-                &copy; MyJournal
-            </div>
-        </footer>
+        
+        <?php include('includes/footer.php'); ?>
+        
     </body>
 </html>
