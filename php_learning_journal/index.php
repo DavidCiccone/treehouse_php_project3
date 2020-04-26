@@ -22,7 +22,7 @@
                <?php foreach(getJournalEntries() as $entry){
                    
                    echo '<article><h2>'. 
-                    '<a href="detail.php">' . $entry[title] . '</a></h2>'. 
+                    '<a href="detail.php?id='. $entry[id] .'">' . $entry[title] . '</a></h2>'. 
                     '<time datetime="' . $entry[date] . '">' . date('M jS, Y', strtotime($entry[date])) .'</time>'. 
                     '</article>';
                }
