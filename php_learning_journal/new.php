@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>MyJournal</title>
+        <title>The Journal of David Ciccone | New Journal Entry</title>
         <link href="https://fonts.googleapis.com/css?family=Cousine:400" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Work+Sans:600" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,7 +30,7 @@
             $resources = trim(filter_input(INPUT_POST, 'ResourcesToRemember', FILTER_SANITIZE_STRING));
             
             addJournalEntry($title, $date, $timeSpent, $learned, $resources);
-            header('Location: new.php');
+            header('Location: index.php');
             exit;
         };
     
@@ -49,7 +49,7 @@
                         <input id="time-spent" type="text" name="timeSpent" value="<?php echo $timeSpent; ?>" required><br>
                         <label for="what-i-learned">What I Learned</label>
                         <textarea id="what-i-learned" rows="5" type="text" name="whatILearned" value="<?php echo $learned; ?>"></textarea>
-                        <label for="resources-to-remember">Resources to Remember</label>
+                        <label for="resources-to-remember">Resources to Remember <span style="font-size:12px;">Separate each resource with a semicolon "Resource 1;Resource 2;ect"</span></label>
                         <textarea id="resources-to-remember" type="text" rows="5" name="ResourcesToRemember" value="<?php echo $resources; ?>"></textarea>
                         <input type="submit" value="submit" class="button">
                         <input type="reset" value="Cancel" class="button button-secondary">

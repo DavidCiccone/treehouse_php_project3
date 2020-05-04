@@ -13,6 +13,7 @@ body {
 .container {
 	margin: 0 auto;
 	padding: 0 25px;
+	background-color: #e1e1e1;
 }
 header .site-header {
 	margin: 0 auto;
@@ -32,6 +33,16 @@ footer {
 	text-align: center;
 	padding: 35px 0;
 	border-top: 2px dotted #678f89;
+}
+article{
+	background-color: #ffffff;
+	padding: 10px;
+}
+article h2{
+	text-decoration: underline;
+}
+article h2 a:hover{
+	color:red;
 }
 
 
@@ -175,11 +186,21 @@ ul li a {
 	padding-bottom: 80px;
 	text-align: center;
 	margin: 0 auto;
+	background-color: #e1e1e1;
 }
 .edit a {
 	font-weight: 400;
 	text-transform: uppercase;
 	font-size: 18px;
+}
+
+.edit p{
+	margin-top:0;
+}
+.header-title{
+	text-align: center;
+	padding-top: 30px;
+	font-size: 32px;
 }
 
 
