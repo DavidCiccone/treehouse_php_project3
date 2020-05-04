@@ -1,0 +1,9 @@
+Journal App
+
+To run the program download the repository to your computer and point your localhost at the folder containing the index.php file.
+
+PHP and SQLite are required for the App to run.
+
+The program is a simple journal app that allow the user add, edit, and delete entries.
+
+The data is accessed and stored using SQLite in the journal.db file that is located in the includes folder.
